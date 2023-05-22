@@ -1,7 +1,7 @@
 class Usuario:
-    def __init__(self,nome,cpf,email,telefone ):
-        self.nome = nome
+    def __init__(self,cpf,nome,email,telefone):
         self.cpf = cpf
+        self.nome = nome
         self.email = email
         self.telefone = telefone
 
