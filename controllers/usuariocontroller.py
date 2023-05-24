@@ -8,6 +8,20 @@ def Incluir(usuario):
     usuario.cpf,usuario.nome,usuario.email,usuario.telefone).rowcount
     db.cnxn.commit()
 
+
+def Deletar(cpf):
+    count = db.cursor.execute("""
+    DELETE FROM USUARIO WHERE cpf = ?""",
+    cpf).rowcount
+    db.cnxn.commit()
+
+def Incluir(usuario):
+    count = db.cursor.execute("""
+    INSERT INTO usuario (cpf, nome,email,telefone) 
+    VALUES (?,?,?,?)""",
+    usuario.cpf,usuario.nome,usuario.email,usuario.telefone).rowcount
+    db.cnxn.commit()
+
 def SelecionarTodos():
     db.cursor.execute("SELECT *FROM usuario")
     costumerList = []
