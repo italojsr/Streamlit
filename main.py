@@ -16,6 +16,7 @@ PageClient = st.sidebar.selectbox('Usuário',['Cadastrar','Alterar','Excluir','C
 
 
 if PageClient == 'Cadastrar':
+    st.experimental_set_query_params()
     Cadastro.Cadastrar()
 
 elif PageClient == 'Consultar':
