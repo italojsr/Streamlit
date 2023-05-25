@@ -11,6 +11,7 @@ def Consultar():
 
     paramId = st.experimental_get_query_params()
     if(paramId == {}):
+        st.title("Consulta de Usuários")
         # Construindo as colunas da tabela com o streamlit
         colunas = st.columns(6)
         nomes_colunas = ['CPF','Nome','Email','Telefone','Excluir','Alterar']
